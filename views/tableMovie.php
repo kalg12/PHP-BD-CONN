@@ -29,8 +29,8 @@ $result = $movie->getMovies();
             <td><?php echo $row['nombre']; ?></td>
             <td><?php echo $row['categoria']; ?></td>
             <td><?php echo $row['duracion']; ?></td>
-            <td><a href="editMovie.php?id=<?php echo $row['idPelicula']; ?>" class="btn btn-primary">Editar</a></td>
-            <td><a href="tableMovie.php?id=<?php echo $row['idPelicula']; ?>" class="btn btn-danger">Eliminar</a></td>
+            <td><a href="editMovie.php?idPelicula=<?php echo $row['idPelicula']; ?>" class="btn btn-warning">Editar</a></td>
+            <td><a href="deleteMovie.php?idPelicula=<?php echo $row['idPelicula']; ?>" class="btn btn-danger">Eliminar</a></td>
         </tr>
         <?php
             }

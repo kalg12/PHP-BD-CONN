@@ -40,7 +40,7 @@ class Movie extends Conexion
         $sql = "DELETE FROM peliculas WHERE idPelicula = '$idPelicula'";
         $result = mysqli_query($this->conectar(), $sql);
         if ($result) {
-            echo "Datos eliminados correctamente";
+            Header("Location: index.php");
         } else {
             echo "Error al eliminar los datos";
         }
