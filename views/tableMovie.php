@@ -9,7 +9,7 @@ $result = $movie->getMovies();
 ?>
 
 <!-- Devolveos con estilos la tabla -->
-<table class="table table-striped">
+<table class="table table-striped container">
     <thead>
         <tr>
             <th>ID</th>

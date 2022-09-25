@@ -15,9 +15,9 @@ class Movie extends Conexion
         $sql = "INSERT INTO peliculas (nombre, categoria, duracion) VALUES ('$nombre', '$categoria', '$duracion')";
         $result = mysqli_query($this->conectar(), $sql);
         if ($result) {
-            echo "Datos insertados correctamente";
+            return true;
         } else {
-            echo "Error al insertar los datos";
+            return false;
         }
     }
 
