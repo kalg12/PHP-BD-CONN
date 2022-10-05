@@ -17,5 +17,21 @@
 </div>
 
 <?php
+/* Nos traemos todo el código del archivo Movie.php */
+require_once './models/Movie.php';
+
+/* Creamos un objeto de la clase Movie */
+$movie = new Movie();
+
+/* Insertar datos del formulario en la tabla peliculas */
+/* Getting the data from the form and storing it in variables. */
+if (isset($_POST['nombre']) && isset($_POST['categoria']) && isset($_POST['duracion'])) {
+$nombre = $_POST['nombre'];
+$categoria = $_POST['categoria'];
+$duracion = $_POST['duracion'];
+}
+
+/* Insertar los valores de las variables como parametro a nuestra función insertMovie */
+$movie->insertMovie($nombre,$categoria,$duracion);
 
 ?>
