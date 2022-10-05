@@ -15,3 +15,7 @@
     <button type="submit" class="btn btn-primary mt-3">Guardar</button>
 </form>
 </div>
+
+<?php
+
+?>
