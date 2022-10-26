@@ -19,6 +19,7 @@ class Movie extends Conexion{
         }
     }
 
+    //Leer películas desde la DB
     public function getMovies (){
         $sql = "SELECT * FROM peliculas";
         $result = mysqli_query($this->conectar(), $sql);
@@ -26,6 +27,13 @@ class Movie extends Conexion{
     }
 
     //Para editar y eliminar necesitamos pasar un parámetro para indicar que elemento vamos a borrar
+    public function editMovie($idPelicula)
+    {
+        $sql = "SELECT * FROM peliculas WHERE idPelicula = '$idPelicula'";
+        $result = mysqli_query($this->conectar(), $sql);
+        return $result;
+    }
+
     public function deleteMovie($idPelicula){
         $sql = "DELETE FROM peliculas WHERE idPelicula = '$idPelicula'";
         $result = mysqli_query($this->conectar(), $sql);
