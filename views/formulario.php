@@ -29,9 +29,8 @@ if (isset($_POST['nombre']) && isset($_POST['categoria']) && isset($_POST['durac
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
 $duracion = $_POST['duracion'];
-}
 
 /* Insertar los valores de las variables como parametro a nuestra función insertMovie */
 $movie->insertMovie($nombre,$categoria,$duracion);
-
+}
 ?>
