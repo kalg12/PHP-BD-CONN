@@ -16,6 +16,7 @@
     require_once "./views/navbar.php";
     require_once "./views/carousel.php";
     require_once "./views/formulario.php";
+    require_once "./views/tableMovies.php";
 
     $conexion = new Conexion();
     $enlace = $conexion->conectar();
